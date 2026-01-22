@@ -1,2 +1,6 @@
 # deep-mca
-cs172b project
+
+# setup
+- Download `uv`, `llvm`
+- `uv sync`
+- `uv run scripts/check_env.py`

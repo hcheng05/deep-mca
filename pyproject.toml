@@ -1,0 +1,24 @@
+[project]
+name = "deep-mca"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "datasets>=4.5.0",
+    "polars>=1.37.1",
+    "tokenizers>=0.22.2",
+    "torch>=2.10.0",
+    "tqdm>=4.67.1",
+    "transformers>=4.57.6",
+    "typer>=0.21.1",
+]
+
+[dependency-groups]
+dev = [
+    "jupyterlab>=4.5.2",
+    "matplotlib>=3.10.8",
+    "pytest>=9.0.2",
+    "ruff>=0.14.13",
+    "seaborn>=0.13.2",
+]
