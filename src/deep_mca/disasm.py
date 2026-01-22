@@ -1,9 +1,9 @@
 """
-This module is adapted from disasm from bhive, but placed here so it can
-be more easily imported.
+This module is adapted from disasm from bhive, but placed here so it can be more easily imported.
 """
 
 import subprocess
+
 
 def disassemble(hex_str: str, output_intel_syntax: bool = False) -> str:
     args = []
@@ -12,7 +12,7 @@ def disassemble(hex_str: str, output_intel_syntax: bool = False) -> str:
         args.append("0x" + byte)
 
     syntax_id = 1 if output_intel_syntax else 0
-    cmd = "echo %s | llvm-mc -disassemble -output-asm-variant=%d" % (
+    cmd = "echo {} | llvm-mc -disassemble -output-asm-variant={}".format(
         " ".join(args),
         syntax_id,
     )

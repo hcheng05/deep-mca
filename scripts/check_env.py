@@ -1,11 +1,12 @@
 import shutil
-import sys
+
 import torch
+
 
 def check_env():
     # check pytorch
     try:
-        print(f"PyTorch is installed")
+        print("PyTorch is installed")
         if torch.cuda.is_available():
             print(f"gpu available {torch.cuda.get_device_name(0)}")
         elif torch.backends.mps.is_available():
@@ -36,6 +37,7 @@ def check_env():
         raise Exception("llvm-objdump is not installed")
 
     print("Environment check passed")
+
 
 if __name__ == "__main__":
     check_env()
